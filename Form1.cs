@@ -21,9 +21,8 @@ namespace Pushkin__s_Fairy_Tales
             InitializeComponent();
             comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             comboBox1.SelectedIndex = 0;
-            pictureBox1.Image = System.Drawing.Image.FromFile("the groom.jpg");
-            StreamReader sr = new StreamReader("the groom.rtf");
-            richTextBox1.Text = sr.ReadToEnd();
+            pictureBox1.Image = System.Drawing.Image.FromFile(@"bun\\bun.jpg");
+            richTextBox1.LoadFile(System.Windows.Forms.Application.StartupPath + @"\\bun\\bun.rtf");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,29 +44,19 @@ namespace Pushkin__s_Fairy_Tales
         {
             if (comboBox1.SelectedIndex == 0)
             {
-                pictureBox1.Image = System.Drawing.Image.FromFile("the groom.jpg");
-                StreamReader sr = new StreamReader("the groom.rtf");
-                richTextBox1.Text = sr.ReadToEnd();
+                pictureBox1.Image = System.Drawing.Image.FromFile(@"bun\\bun.jpg");
+                richTextBox1.LoadFile(System.Windows.Forms.Application.StartupPath + @"\\bun\\bun.rtf");
             }
             if (comboBox1.SelectedIndex == 1)
             {
-                pictureBox1.Image = System.Drawing.Image.FromFile("golden artem.jpg");
-                StreamReader sr = new StreamReader("golden artem.rtf");
-                richTextBox1.Text = sr.ReadToEnd();
+                pictureBox1.Image = System.Drawing.Image.FromFile(@"Chicken ryaba\\Chicken ryaba.jpg");
+                richTextBox1.LoadFile(System.Windows.Forms.Application.StartupPath + @"\\Chicken ryaba\\Chicken ryaba.rtf");
             }
             if (comboBox1.SelectedIndex == 2)
             {
-                pictureBox1.Image = System.Drawing.Image.FromFile("bear.jpg");
-                StreamReader sr = new StreamReader("bear.rtf");
-                richTextBox1.Text = sr.ReadToEnd();
+                pictureBox1.Image = System.Drawing.Image.FromFile(@"Masha and the Bear\\Masha and the Bear.jpg");
+                richTextBox1.LoadFile(System.Windows.Forms.Application.StartupPath + @"\\Masha and the Bear\\Masha and the Bear.rtf");
             }
-            if (comboBox1.SelectedIndex == 3)
-            {
-                pictureBox1.Image = System.Drawing.Image.FromFile("Sultan.jpg");
-                StreamReader sr = new StreamReader("Sultan.rtf");
-                richTextBox1.Text = sr.ReadToEnd();
-            }
-
         }
     }
 }
